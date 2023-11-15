@@ -33,6 +33,7 @@ public class UserController {
     // create get all the users REST API
     @GetMapping
     public ResponseEntity<List<User>> getAllUsers() {
+         
         List<User> allUsers = userService.getAllUsers();
         return new ResponseEntity<>(allUsers, HttpStatus.OK);
     }
